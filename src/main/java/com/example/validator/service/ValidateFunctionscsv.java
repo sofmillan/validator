@@ -1,15 +1,15 @@
 package com.example.validator.service;
 
-import com.example.validator.model.People;
+import com.example.validator.model.PeopleCSV;
 import org.springframework.stereotype.Component;
 
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
 @Component
-public class ValidateFunctions {
+public class ValidateFunctionscsv {
 
-    public boolean validateEmail(People person){
+    public boolean validateEmail(PeopleCSV person){
         Pattern pattern = Pattern
                 .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
                         + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
@@ -17,7 +17,7 @@ public class ValidateFunctions {
         return matcher.find();
     }
 
-    public boolean validateJob(People person){
+    public boolean validateJob(PeopleCSV person){
         String job = person.getJobTitle();
         if(job.equals("Haematologist")||job.equals("Phytotherapist")|| job.equals("Building surveyor") ||
                 job.equals("Insurance account manager") ||job.equals("Educational psychologist")){
@@ -26,7 +26,7 @@ public class ValidateFunctions {
         return false;
     }
 
-    public boolean validateBirthDate(People person){
+    public boolean validateBirthDate(PeopleCSV person){
         String birthDate = person.getDateOfBirth();
         int year = Integer.parseInt(birthDate.substring(birthDate.length()-4));
 

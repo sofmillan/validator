@@ -1,6 +1,6 @@
 package com.example.validator.model;
 
-public class People {
+public class PeopleCSV {
     private String index;
     private String userId;
 
@@ -13,7 +13,8 @@ public class People {
     private String dateOfBirth;
     private String jobTitle;
 
-    public People(String index, String userId, String firstName, String lastName, String sex, String email, String phone, String dateOfBirth, String jobTitle) {
+    public PeopleCSV(){}
+    public PeopleCSV(String index, String userId, String firstName, String lastName, String sex, String email, String phone, String dateOfBirth, String jobTitle) {
         this.index = index;
         this.userId = userId;
         this.firstName = firstName;
